@@ -1,7 +1,7 @@
 {
     "name": "Tardis-World",
     "preductname": "Tardis World",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "description": "Launcher Mincraft pour le serveur Tardis World",
     "main": "src/app.js",
     "author": {
@@ -14,7 +14,7 @@
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
         "build": "node build.js --obf=true --build=platform",
-        "icon": "node build.js --icon=https://image.noelshack.com/fichiers/2025/02/3/1736350473-sans-titre.png"
+        "icon": "node build.js --icon=https://image.noelshack.com/fichiers/2025/02/6/1736552721-sans-titre-photoroom.png"
     },
     "license": "CCANC",
     "nodemonConfig": {
