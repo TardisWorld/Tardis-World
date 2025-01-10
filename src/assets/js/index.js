@@ -30,9 +30,20 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "ALFRED AU TROU !!!", "author": "TheMaster" },
-            { "message": "Pour Gallifrey,Pour les Seigneur du Temps,Pour la fin de l'univers lui même!", "author": "The Master" },
-            { "message": "Appeler moi par mon nom.... Maitre.... J'aime quand vous m'appeler par mon nom", "author": "The Master" }
+            { "message": "ALFRED AU TROU !!!", "author": "The Master" },
+            { "message": "Pour Gallifrey", "author": "The Master" },
+            { "message": "les Seigneur du Temps", "author": "The Master" },
+            { "message": "Pour la fin de l'univers lui même!", "author": "The Master" },
+            { "message": "Appeler moi par mon nom...", "author": "The Master" },
+            { "message": "J'aime quand vous m'appeler par mon nom", "author": "The Master" },
+            { "message": "Allonz-y ! ", "author": "10th Docteur " },
+            { "message": "Géronimooooo ! ", "author": "11th Docteur" },
+            { "message": "Fantastique ", "author": "9th Docteur" },
+            { "message": "What What Whaaat !!! ", "author": "10th Docteur" },
+            { "message": "Hello sweetie ", "author": "River" },
+            { "message": "Spoilers ", "author": "River" },
+            { "message": "Don't Blink ", "author": "10th Docteur" },
+            { "message": "Faite moi confiance, je suis le docteur", "author": "11th Docteur" },
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
