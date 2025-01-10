@@ -284,18 +284,7 @@ class Home {
 
             
         }
-        // Couper la musique avant de lancer le jeu
-        const audioElement = document.getElementById("audioPlayer");// Assurez-vous que l'élément audio a cet ID
-        if (audioElement) {
-        if (!audioElement.paused) {
-            audioElement.pause();
-            console.log("Musique coupée avant le lancement du jeu.");
-        } else {
-            console.log("La musique est déjà arrêtée.");
-        }
-        } else {
-        console.error("Aucun élément audio avec l'ID 'audioPlayer' n'a été trouvé.");
-    }
+        
 
         launch.Launch(opt);
 
