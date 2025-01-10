@@ -32,7 +32,7 @@ class Splash {
         let splashes = [
             { "message": "ALFRED AU TROU !!!", "author": "The Master" },
             { "message": "Pour Gallifrey", "author": "The Master" },
-            { "message": "les Seigneur du Temps", "author": "The Master" },
+            { "message": "Pour les Seigneur du Temps", "author": "The Master" },
             { "message": "Pour la fin de l'univers lui même!", "author": "The Master" },
             { "message": "Appeler moi par mon nom...", "author": "The Master" },
             { "message": "J'aime quand vous m'appeler par mon nom", "author": "The Master" },
