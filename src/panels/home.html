@@ -47,44 +47,7 @@
         <div class="settings-btn icon-settings"></div>
 
         <audio id="audioPlayer" autoplay controls src=""></audio>
-        <script>
-            // Liste des musiques (ajoutez vos fichiers ici)
-            const playlist = [
-              'music1.wav',
-                  'music2.wav',
-                  'music3.wav',
-                  'music4.wav',
-                  'music5.wav',
-                  'music6.wav',
-                  'music7.wav',
-                  'music8.wav',
-                  'music9.wav',
-                  'music10.wav'
-            ];
-        
-            const audioPlayer = document.getElementById('audioPlayer');
-        
-            // Fonction pour obtenir une musique aléatoire
-            function getRandomSong() {
-              const randomIndex = Math.floor(Math.random() * playlist.length);
-              return playlist[randomIndex];
-            }
-        
-            // Fonction pour jouer une musique aléatoire
-            function playRandomSong() {
-              const randomSong = getRandomSong();
-              audioPlayer.src = randomSong; // Met à jour le chemin source
-              audioPlayer.play().catch(err => console.error('Erreur de lecture :', err));
-            }
-        
-            // Lecture automatique au démarrage
-            playRandomSong();
-        
-            // Lecture automatique de la prochaine musique après la fin de la lecture
-            audioPlayer.addEventListener('ended', playRandomSong);
-          </script>
-
-    </div>
+        </div>
 
     <div class="instance-popup">
         <div class="instances-tab">

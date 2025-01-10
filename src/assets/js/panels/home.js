@@ -16,6 +16,44 @@ class Home {
         this.socialLick()
         this.instancesSelect()
         document.querySelector('.settings-btn').addEventListener('click', e => changePanel('settings'))
+
+        // Liste des musiques (ajoutez vos fichiers ici)
+        const playlist = [
+                'music1.mp3',
+                'music2.mp3',
+                'music3.mp3',
+                'music4.mp3',
+                'music5.mp3',
+                'music6.mp3',
+                'music7.mp3',
+                'music8.mp3',
+                'music9.mp3',
+                'music10.mp3'
+          ];
+
+          const audioPlayer = document.getElementById('audioPlayer');
+      
+          // Fonction pour obtenir une musique aléatoire
+          function getRandomSong() {
+            const randomIndex = Math.floor(Math.random() * playlist.length);
+            return playlist[randomIndex];
+          }
+      
+          // Fonction pour jouer une musique aléatoire
+          function playRandomSong() {
+            const randomSong = getRandomSong();
+            audioPlayer.src = randomSong; // Met à jour le chemin source
+            audioPlayer.play(); // Lance la lecture
+          }
+      
+          // Lecture automatique au démarrage
+          playRandomSong();
+      
+          // Lecture automatique de la prochaine musique après la fin de la lecture
+          audioPlayer.addEventListener('ended', playRandomSong);
+
+          audioPlayer.volume = 0.05;
+          
     }
 
     async news() {
@@ -208,6 +246,7 @@ class Home {
         let infoStartingBOX = document.querySelector('.info-starting-game')
         let infoStarting = document.querySelector(".info-starting-game-text")
         let progressBar = document.querySelector('.progress-bar')
+        
 
         let opt = {
             url: options.url,
@@ -240,8 +279,23 @@ class Home {
             memory: {
                 min: `${configClient.java_config.java_memory.min * 1024}M`,
                 max: `${configClient.java_config.java_memory.max * 1024}M`
-            }
+            },
+            
+
+            
         }
+        // Couper la musique avant de lancer le jeu
+        const audioElement = document.getElementById("audioPlayer");// Assurez-vous que l'élément audio a cet ID
+        if (audioElement) {
+        if (!audioElement.paused) {
+            audioElement.pause();
+            console.log("Musique coupée avant le lancement du jeu.");
+        } else {
+            console.log("La musique est déjà arrêtée.");
+        }
+        } else {
+        console.error("Aucun élément audio avec l'ID 'audioPlayer' n'a été trouvé.");
+    }
 
         launch.Launch(opt);
 
@@ -307,6 +361,15 @@ class Home {
             infoStarting.innerHTML = `Vérification`
             new logger(pkg.name, '#7289da');
             console.log('Close');
+            
+        // Relancer la musique
+        const audioElement = document.getElementById("audioPlayer"); // Assurez-vous que l'élément audio a cet ID
+        if (audioElement) {
+        audioElement.currentTime = 0; // Revenir au début de la musique
+        audioElement.play().catch(error => console.error("Erreur lors de la lecture de la musique :", error));
+        } else {
+        console.error("Aucun élément audio avec l'ID 'audioPlayer' n'a été trouvé.");
+        }
         });
 
         launch.on('error', err => {
