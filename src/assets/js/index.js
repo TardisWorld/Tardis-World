@@ -36,7 +36,7 @@ class Splash {
             { "message": "Pour la fin de l'univers lui même!", "author": "The Master" },
             { "message": "Appeler moi par mon nom...", "author": "The Master" },
             { "message": "J'aime quand vous m'appeler par mon nom", "author": "The Master" },
-            { "message": "Allonz-y ! ", "author": "10th Docteur " },
+            { "message": "Allons-y Alonso! ", "author": "10th Docteur " },
             { "message": "Géronimooooo ! ", "author": "11th Docteur" },
             { "message": "Fantastique ", "author": "9th Docteur" },
             { "message": "What What Whaaat !!! ", "author": "10th Docteur" },
@@ -44,6 +44,7 @@ class Splash {
             { "message": "Spoilers ", "author": "River" },
             { "message": "Don't Blink ", "author": "10th Docteur" },
             { "message": "Faite moi confiance, je suis le docteur", "author": "11th Docteur" },
+            { "message": "Oh YES ", "author": "10th Docteur" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
