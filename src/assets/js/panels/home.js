@@ -59,7 +59,7 @@ class Home {
           // Lecture automatique de la prochaine musique après la fin de la lecture
           audioPlayer.addEventListener('ended', playRandomSong);
 
-          audioPlayer.volume = 0.1;
+          audioPlayer.volume = 0.2;
           
     }
 
