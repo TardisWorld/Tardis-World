@@ -29,8 +29,8 @@ class Home {
                 'music8.mp3',
                 'music9.mp3',
                 'music10.mp3',
-                'music12.mp3',
-                'music13.mp3'
+                'music11.mp3',
+                'music12.mp3'
             
           ];
 
