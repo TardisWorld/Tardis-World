@@ -327,11 +327,19 @@ class Home {
         });
 
         launch.on('estimated', (time) => {
-            let hours = Math.floor(time / 3600);
-            let minutes = Math.floor((time - hours * 3600) / 60);
-            let seconds = Math.floor(time - hours * 3600 - minutes * 60);
-            console.log(`${hours}h ${minutes}m ${seconds}s`);
-        })
+            if (time === Infinity || isNaN(time)) {
+                console.log("Temps estimé infini. Interruption et relance du téléchargement...");
+                launch.stop(); // Arrête le téléchargement
+                setTimeout(() => {
+                    launch.start(); // Relance le téléchargement
+                }, 1000); // Relance après une petite pause (1 seconde ici)
+            } else {
+                let hours = Math.floor(time / 3600);
+                let minutes = Math.floor((time - hours * 3600) / 60);
+                let seconds = Math.floor(time - hours * 3600 - minutes * 60);
+                console.log(`${hours}h ${minutes}m ${seconds}s`);
+            }
+        });
 
         launch.on('speed', (speed) => {
             console.log(`${(speed / 1067008).toFixed(2)} Mb/s`)
