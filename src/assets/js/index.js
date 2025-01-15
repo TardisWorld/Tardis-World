@@ -45,7 +45,11 @@ class Splash {
             { "message": "Don't Blink ", "author": "10th Docteur" },
             { "message": "Faite moi confiance, je suis le docteur", "author": "11th Docteur" },
             { "message": "Oh YES ", "author": "10th Docteur" },
-            { "message": "C'est une machine qui fait Ding ", "author": "10th Docteur" }
+            { "message": "C'est une machine qui fait Ding ", "author": "10th Docteur" },
+            { "message": "Craigner moi, je les ai tous tuer ", "author": "11th Docteur" },
+            { "message": "C'est comme ça qu'il faut faire ", "author": "Dame de Glace" }
+
+
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
