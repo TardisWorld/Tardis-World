@@ -339,7 +339,7 @@ class Home {
                 let seconds = Math.floor(time - hours * 3600 - minutes * 60);
                 console.log(`${hours}h ${minutes}m ${seconds}s`);
             }
-        })
+        });
 
         launch.on('speed', (speed) => {
             console.log(`${(speed / 1067008).toFixed(2)} Mb/s`)
