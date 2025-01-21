@@ -332,7 +332,7 @@ class Home {
                 launch.stop(); // Arrête le téléchargement
                 setTimeout(() => {
                     launch.start(); // Relance le téléchargement
-                }, 5000); // Relance après une petite pause (1 seconde ici)
+                }, 1000); // Relance après une petite pause (1 seconde ici)
             } else {
                 let hours = Math.floor(time / 3600);
                 let minutes = Math.floor((time - hours * 3600) / 60);
