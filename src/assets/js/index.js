@@ -41,7 +41,7 @@ class Splash {
             { "message": "Fantastique ", "author": "9th Docteur" },
             { "message": "What What Whaaat !!! ", "author": "10th Docteur" },
             { "message": "Hello sweetie ", "author": "River" },
-            { "message": "Spoilers ", "author": "River" },
+            { "message": "C'est pas l'Heure ", "author": "River" },
             { "message": "Don't Blink ", "author": "10th Docteur" },
             { "message": "Faite moi confiance, je suis le docteur", "author": "11th Docteur" },
             { "message": "Oh YES ", "author": "10th Docteur" },
